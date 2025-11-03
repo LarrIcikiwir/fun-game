@@ -1,0 +1,82 @@
+/* styles.css - responsive, modern, minimal */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+  --radius:18px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071029 0%, #071a2b 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* layout */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px;
+}
+
+/* header */
+.site-header{
+  padding:28px 0 10px;
+}
+.site-header h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing:0.4px;
+}
+.tagline{color:var(--muted);margin-top:6px}
+
+/* cards */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.phone-card{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.phone-display{
+  font-size:22px;
+  padding:12px 16px;
+  background:var(--glass);
+  border-radius:12px;
+  width:100%;
+  text-align:left;
+}
+.actions{display:flex;gap:8px;width:100%}
+.actions input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.actions button{padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent), #60a5fa);color:#022;cursor:pointer;font-weight:600}
+
+.note{color:var(--muted);font-size:13px}
+
+/* quiz */
+.quiz-card .quiz-buttons{display:flex;gap:12px;margin-top:12px}
+.quiz-buttons button{flex:1;padding:10px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.truth-btn{background:linear-gradient(90deg,#34d399,#10b981);color:#022}
+.lie-btn{background:linear-gradient(90deg,#fda4af,#fb7185);color:#2b0210}
+.feedback{margin-top:10px;color:var(--muted)}
+.quiz-controls{display:flex;gap:8px;margin-top:12px}
+.quiz-controls button{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;cursor:pointer}
+
+/* footer */
+.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
+
+/* responsive */
+@media (min-width:760px){
+  main.container{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .info-card{grid-column:span 2}
+}

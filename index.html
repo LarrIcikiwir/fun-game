@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nomor Pembohong Publik — Game Ringan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Nomor Pembohong Publik</h1>
+      <p class="tagline">Situs permainan ringan bersama teman — gunakan nomor contoh atau anonim.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card phone-card">
+      <h2>Nomor (contoh)</h2>
+      <div class="phone-display" id="phoneDisplay">+62 ••• •••• ••••</div>
+      <div class="actions">
+        <input id="phoneInput" type="text" placeholder="Masukkan nomor (opsional, contoh: +62 811 2345 6789)" />
+        <button id="setPhoneBtn">Tampilkan</button>
+        <button id="maskToggleBtn">Tampilkan/Menyamarkan</button>
+      </div>
+      <p class="note">Jangan masukkan nomor pribadi orang lain tanpa izin. Gunakan nomor contoh atau anonim.</p>
+    </section>
+
+    <section class="card quiz-card">
+      <h2>Permainan: Tebak Kebohongan</h2>
+      <p>Pilih salah satu pernyataan — tandai apakah menurutmu itu <strong>Benar</strong> atau <strong>Bohong</strong>.</p>
+      <div id="quizArea">
+        <div id="statement">Saya bisa terbang tanpa alat bantu.</div>
+        <div class="quiz-buttons">
+          <button class="truth-btn">Benar</button>
+          <button class="lie-btn">Bohong</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+      </div>
+      <div class="quiz-controls">
+        <button id="nextStatement">Pernyataan Baru</button>
+        <button id="addStatementBtn">Tambah Pernyataan</button>
+      </div>
+      <div id="addForm" class="hidden">
+        <input id="newStatement" type="text" placeholder="Tulis pernyataan baru..." />
+        <button id="saveStatement">Simpan</button>
+      </div>
+    </section>
+
+    <section class="card info-card">
+      <h2>Petunjuk & Etika</h2>
+      <ul>
+        <li>Gunakan situs ini hanya untuk permainan antar teman dan nama-nama contoh.</li>
+        <li>Jangan menuduh atau menargetkan nomor pribadi seseorang tanpa bukti atau izin.</li>
+        <li>Jika kamu ingin menyelidiki penipuan, gunakan jalur resmi seperti operator atau pihak berwajib.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Template responsif — sesuaikan sesuka hati. Dibuat untuk tujuan hiburan.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
